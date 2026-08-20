@@ -1,0 +1,29 @@
+{
+  "scenario1": {
+    "ranking": [
+      "SC",
+      "SB",
+      "SD",
+      "SA"
+    ],
+    "expected": "SC > SB > SD > SA"
+  },
+  "scenario2": {
+    "ranking": [
+      "SC",
+      "SA",
+      "SD",
+      "SB"
+    ],
+    "expected": "SC > SA > SD > SB"
+  },
+  "scenario3": {
+    "ranking": [
+      "SA",
+      "SC",
+      "SD",
+      "SB"
+    ],
+    "expected": "SA > SC > SD > SB"
+  }
+}
