@@ -802,47 +802,7 @@ python3 -m venv venv
 source venv/bin/activate
 ```
 
-## 3. Install Dependencies
 
-```bash
-pip install -r requirements.txt
-```
-
----
-
-
-
-
-sequenceDiagram
-
-    participant U as User
-    participant D as Dashboard
-    participant Q as Query Engine
-    participant M as QBMetrics
-    participant R as Ranking Engine
-    participant P as Migration Planner
-
-    U->>D: Select schemas and workload
-    D->>Q: Parse SQL queries
-    Q->>Q: Generate Query DAGs
-
-    D->>M: Submit Schema DAGs + Query DAGs
-    M->>M: Calculate query-based metrics
-    M->>R: Generate scores
-
-    R->>R: Apply scenario weights
-    R->>D: Return schema ranking
-
-    U->>D: Select optimal schema
-    D->>P: Send selected DAG
-
-    P->>P: Traverse DAG
-    P->>P: Generate transformation commands
-    P->>P: Join + map + nest data
-
-    P->>D: Return document preview
-    D->>U: Display / Export result
-```
 
 ---
 
